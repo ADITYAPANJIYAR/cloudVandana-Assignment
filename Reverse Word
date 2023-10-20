@@ -1,0 +1,21 @@
+function reverseWordsInSentence(sentence) {
+    var words = sentence.split(' ');
+
+    // Reverse each word in the array
+    for (var i = 0; i < words.length; i++) {
+        words[i] = reverseWord(words[i]);
+    }
+    // Join the reversed words back into a sentence
+    var reversedSentence = words.join(' ');
+    return reversedSentence;
+}
+
+function reverseWord(word) {
+    // Split the word into individual characters, reverse them, and join back
+    return word.split('').reverse().join('');
+}
+
+
+var inputSentence = "This is a sunny day";// Example
+var reversed = reverseWordsInSentence(inputSentence);
+console.log(reversed);
